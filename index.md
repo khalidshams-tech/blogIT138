@@ -1,4 +1,4 @@
-# Starting My Technical Blog with GitHub Pages
+
 
 Hello everyone,
 
