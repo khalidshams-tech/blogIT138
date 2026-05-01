@@ -1,137 +1,61 @@
-# Khalid Shams Technical Blog and Portfolio
+# Khalid Shams IT138 Blog
 
-This is a GitHub Pages-ready personal technical blog and portfolio website for Khalid Shams.
+GitHub Pages technical learning portfolio for Khalid Shams and the IT138 Linux+ class.
 
-The site is intentionally simple and professional for IT138 and future IT/cybersecurity career use.
+Live site:
 
-## Main Sections
+```text
+https://khalidshams-tech.github.io/blogIT138/
+```
 
-- Home
-- Learning Blog
-- Job Experience
-- Projects & Certifications
-- Resume & Contact
-
-## File Structure
+## Main Files
 
 ```text
 blogIT138/
-+-- index.html
-+-- README.md
++-- _config.yml
++-- index.md
++-- linux.md
++-- week1.md
++-- week3.md
++-- legacy-portfolio.html
 +-- resume.html
 +-- assets/
     +-- css/
-    |   +-- styles.css
-    +-- js/
-    |   +-- script.js
-    +-- images/
-    |   +-- profile.jpg
-    +-- img/
-        +-- design-concept.png
+        +-- jekyll.css
+        +-- styles.css
 ```
 
-## GitHub Pages Deployment
+## Site Structure
 
-1. Push this folder to your GitHub repository.
-2. In the repository, open **Settings**.
-3. Go to **Pages**.
-4. Under **Build and deployment**, choose **Deploy from a branch**.
-5. Select the `main` branch and the root folder.
-6. Save and wait for GitHub Pages to publish the site.
+- `index.md` - Home page
+- `linux.md` - Linux (IT138) blog tab
+- `week1.md` - Week 1 blog post
+- `week3.md` - Week 3 blog post
+- `assets/css/jekyll.css` - simple styling for the Markdown/Jekyll pages
+- `legacy-portfolio.html` - preserved version of the previous HTML portfolio
 
-## Add or Update Your Profile Photo
+## How to Add a New Weekly Blog Post
 
-Save your profile picture here:
+1. Create a new Markdown file, for example:
 
 ```text
-blogIT138/assets/images/profile.jpg
+week4.md
 ```
 
-If `profile.jpg` is missing, the website automatically shows a circle placeholder with `KS`.
+2. Add front matter at the top:
 
-PowerShell example:
-
-```powershell
-Copy-Item "C:\Users\khliadshams\Pictures\my-photo.jpg" "D:\College\Codex Projects\IT138\blogIT138\assets\images\profile.jpg"
-git add assets/images/profile.jpg
-git commit -m "Add profile photo"
-git push
+```markdown
+---
+title: Week 4 | Your Post Title
+---
 ```
 
-## Add a New Blog Post
+3. Add the same navigation and footer used in the other weekly files.
 
-Open `index.html` and search for:
+4. Add the post link only on `linux.md`.
 
-```text
-Learning Blog
-```
+Important: weekly posts should stay under the **Linux (IT138)** tab, not on the home page.
 
-Copy one existing `<article class="post-card">` block and update:
+## GitHub Pages
 
-- Category: `linux`, `networking`, `cloud`, `cybersecurity`, or `troubleshooting`
-- Title
-- Objective
-- Problem
-- What I Tried
-- Solution
-- What I Learned
-
-Example category attribute:
-
-```html
-<article class="post-card reveal" data-category="linux">
-```
-
-## Update Problems Solved
-
-Open `index.html` and search for:
-
-```text
-Problems Solved
-```
-
-Each item should use this format:
-
-- Problem
-- Cause
-- Fix
-- Lesson
-
-## Update Projects
-
-There are two project areas:
-
-1. **Core Projects** in `index.html`
-2. **GitHub Projects** loaded automatically from:
-
-```text
-https://api.github.com/users/khalidshams-tech/repos
-```
-
-To improve the automatic GitHub project cards:
-
-- Add good descriptions to your GitHub repositories.
-- Keep project names clear.
-- Update repositories regularly.
-- Use relevant project names like `linux-labs`, `aws-labs`, `networking-labs`, `python-scripts`, or `cybersecurity-notes`.
-
-## Edit Contact Links
-
-Open `index.html` and search for:
-
-```text
-Resume & Contact
-```
-
-Current contact links:
-
-- GitHub: `https://github.com/khalidshams-tech`
-- LinkedIn: `https://www.linkedin.com/in/khalid-shams-868aaa1a6`
-- Email: `Khalidshams108@gmail.com`
-
-## Changed Files
-
-- `index.html` - simplified structure and content organization
-- `assets/css/styles.css` - cleaner professional dark design
-- `assets/js/script.js` - navigation, filters, profile fallback, and GitHub API project loading
-- `README.md` - updated instructions for blog posts, projects, and profile photo
+This project uses simple Markdown and Jekyll-compatible GitHub Pages files. No complex framework is required.

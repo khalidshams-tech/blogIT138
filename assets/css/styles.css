@@ -493,7 +493,7 @@ p {
   transition: transform 180ms ease, border-color 180ms ease;
 }
 
-.contact-links a > span:first-child {
+.contact-icon {
   width: 34px;
   height: 34px;
   display: inline-grid;
@@ -504,9 +504,11 @@ p {
   font-weight: 900;
 }
 
-.contact-links a > span:last-child {
+.contact-text {
   display: grid;
   gap: 2px;
+  color: var(--text);
+  min-width: 0;
 }
 
 .contact-links small {
